@@ -17,7 +17,6 @@ const config: Config = {
           "pale-blue": "hsl(226, 100%, 87%)",
         },
         neutral: {
-          white: "hsl(0, 0%, 100%)",
           "very-pale-blue": "hsl(230, 100%, 99%)",
           "light-grayish-blue": {
             DEFAULT: "hsl(224, 65%, 95%)",
