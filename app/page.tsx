@@ -1,7 +1,7 @@
-import Button from "./components/Button"
-import Reference from "./components/Reference"
-import Slider from "./components/Slider"
-import TextWithCheck from "./components/TextWithCheck"
+import Slider from "@/components/Slider"
+import Button from "@/components/Button"
+import Reference from "@/components/Reference"
+import TextWithCheck from "@/components/TextWithCheck"
 
 export default function Home() {
   return (
@@ -18,7 +18,9 @@ export default function Home() {
           <h2 className="text-xs font-extrabold uppercase tracking-[0.10713rem]">
             100K Pageviews
           </h2>
-          {/* <Slider className="w-full md:col-span-2" /> */}
+          <div className="mb-[2.5rem] mt-[2.56rem] w-full md:col-span-2">
+            <Slider className="w-full" />
+          </div>
           <div className="mb-[2.13rem] flex items-center gap-[0.62rem] md:col-start-2 md:row-start-1 md:mb-0">
             <span className="text-neutral-dark-desaturated-blue text-[2rem] font-extrabold -tracking-[0.05rem]">
               $16.00
@@ -34,7 +36,7 @@ export default function Home() {
           <p>
             Yearly Billing
             <span className="bg-custom-light-grayish-red text-custom-light-red ml-[0.34rem] rounded-full px-[0.45rem] py-[0.15rem] text-[0.625rem]">
-              -25%
+              -25% <span className="hidden md:inline-block">discount</span>
             </span>
           </p>
         </div>
