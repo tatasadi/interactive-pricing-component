@@ -3,8 +3,15 @@ import React, { useState, useRef } from "react"
 import Image from "next/image"
 import iconSlider from "@/public/images/icon-slider.svg"
 
-const Slider = ({ className = "" }: { className?: string }) => {
-  const [value, setValue] = useState(50) // Default slider value
+const Slider = ({
+  className = "",
+  value,
+  onChange,
+}: {
+  className?: string
+  value: number
+  onChange: (value: number) => void
+}) => {
   const [isDragging, setIsDragging] = useState(false) // State to track dragging
   const sliderRef = useRef<HTMLDivElement>(null) // Ref for the slider bar
 
@@ -23,7 +30,7 @@ const Slider = ({ className = "" }: { className?: string }) => {
     // Calculate new value based on the mouse position within the slider bar
     let newValue = ((e.clientX - left) / width) * 100
     newValue = Math.max(0, Math.min(100, newValue)) // Constrain newValue between 0 and 100
-    setValue(newValue)
+    onChange(newValue)
   }
 
   const stopDragging = () => {
