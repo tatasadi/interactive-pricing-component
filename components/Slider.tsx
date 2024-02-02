@@ -1,7 +1,4 @@
-"use client"
-import React, { useState, useRef } from "react"
-import Image from "next/image"
-import iconSlider from "@/public/images/icon-slider.svg"
+import React, { useState, useRef, MouseEvent } from "react"
 
 const Slider = ({
   className = "",
@@ -15,14 +12,14 @@ const Slider = ({
   const [isDragging, setIsDragging] = useState(false) // State to track dragging
   const sliderRef = useRef<HTMLDivElement>(null) // Ref for the slider bar
 
-  const startDragging = (e) => {
+  const startDragging = (e: MouseEvent<HTMLDivElement>) => {
     setIsDragging(true)
     // Listen to mousemove and mouseup events on the window to track movement and release outside the slider bar
     window.addEventListener("mousemove", onDrag)
     window.addEventListener("mouseup", stopDragging)
   }
 
-  const onDrag = (e) => {
+  const onDrag = (e: any) => {
     e.preventDefault()
     if (!sliderRef.current) return
 
