@@ -2,40 +2,41 @@ import Slider from "@/components/Slider"
 import Button from "@/components/Button"
 import Reference from "@/components/Reference"
 import TextWithCheck from "@/components/TextWithCheck"
+import Toggle from "@/components/Toggle"
 
 export default function Home() {
   return (
     <main className="relative z-10 flex h-full min-h-screen w-full max-w-7xl flex-col items-center px-6 pt-[5.56rem] lg:min-h-0 lg:pt-32">
-      <h1 className="text-neutral-dark-desaturated-blue text-xl font-extrabold leading-normal">
+      <h1 className="text-xl font-extrabold leading-normal text-neutral-dark-desaturated-blue lg:text-[1.75rem] lg:leading-normal">
         Simple, traffic-based pricing
       </h1>
-      <p className="mb-16 mt-2 flex flex-col text-center text-[0.8125rem] font-semibold leading-[1.4375rem] sm:flex-row">
+      <p className="mb-16 mt-2 flex flex-col text-center text-[0.8125rem] font-semibold leading-[1.4375rem] sm:flex-row sm:gap-1 lg:mt-3 lg:text-[0.9375rem] lg:leading-normal">
         <span>Sign-up for our 30-day trial.</span>
         <span>No credit card required.</span>
       </p>
       <div className="flex w-full max-w-[33.75rem] flex-col items-center rounded-lg bg-white pb-8 pt-[2.12rem] shadow-[0_20px_30px_-5px_rgba(127,137,185,0.15)]">
         <div className="grid-cols1 grid w-full place-items-center px-6 md:grid-cols-2 md:px-10">
-          <h2 className="text-xs font-extrabold uppercase tracking-[0.10713rem]">
+          <h2 className="text-xs font-extrabold uppercase tracking-[0.10713rem] lg:text-sm">
             100K Pageviews
           </h2>
           <div className="mb-[2.5rem] mt-[2.56rem] w-full md:col-span-2">
             <Slider className="w-full" />
           </div>
           <div className="mb-[2.13rem] flex items-center gap-[0.62rem] md:col-start-2 md:row-start-1 md:mb-0">
-            <span className="text-neutral-dark-desaturated-blue text-[2rem] font-extrabold -tracking-[0.05rem]">
+            <span className="text-[2rem] font-extrabold -tracking-[0.05rem] text-neutral-dark-desaturated-blue lg:text-[2.5rem]">
               $16.00
             </span>
-            <span className="text-sm font-semibold leading-normal">
+            <span className="text-sm font-semibold leading-normal lg:text-base">
               / month
             </span>
           </div>
         </div>
-        <div className="border-neutral-light-grayish-blue flex w-full items-center justify-center gap-3 border-b pb-11 text-xs font-semibold">
+        <div className="flex w-full items-center justify-center gap-3 border-b border-neutral-light-grayish-blue pb-11 text-xs font-semibold">
           <p>Monthly Billing</p>
-          <div>x</div>
+          <Toggle />
           <p>
             Yearly Billing
-            <span className="bg-custom-light-grayish-red text-custom-light-red ml-[0.34rem] rounded-full px-[0.45rem] py-[0.15rem] text-[0.625rem]">
+            <span className="ml-[0.34rem] rounded-full bg-custom-light-grayish-red px-[0.45rem] py-[0.15rem] text-[0.625rem] text-custom-light-red">
               -25% <span className="hidden md:inline-block">discount</span>
             </span>
           </p>

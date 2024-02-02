@@ -6,7 +6,7 @@ import iconSlider from "@/public/images/icon-slider.svg"
 const Slider = ({ className = "" }: { className?: string }) => {
   const [value, setValue] = useState(50) // Default slider value
   const [isDragging, setIsDragging] = useState(false) // State to track dragging
-  const sliderRef = useRef(null) // Ref for the slider bar
+  const sliderRef = useRef<HTMLDivElement>(null) // Ref for the slider bar
 
   const startDragging = (e) => {
     setIsDragging(true)
@@ -34,13 +34,13 @@ const Slider = ({ className = "" }: { className?: string }) => {
 
   return (
     <div className={className} ref={sliderRef}>
-      <div className="bg-neutral-light-grayish-blue relative h-2 rounded-[-.3125rem]">
+      <div className="relative h-2 rounded-[-.3125rem] bg-neutral-light-grayish-blue">
         <div
-          className="bg-custom-soft-cyan absolute h-full"
+          className="absolute h-full bg-custom-soft-cyan"
           style={{ width: `${value}%` }}
         ></div>
         <div
-          className={`bg-custom-strong-cyan hover:bg-custom-soft-cyan absolute -top-4 flex h-10 w-10 -translate-x-1/2 cursor-grab items-center justify-center rounded-full shadow-[0_15px_25px_rgba(122,234,223,.9)]`}
+          className={`absolute -top-4 flex h-10 w-10 -translate-x-1/2 cursor-grab items-center justify-center rounded-full bg-custom-strong-cyan shadow-[0_15px_25px_rgba(122,234,223,.9)] hover:bg-custom-soft-cyan`}
           style={{
             left: `${value}%`,
             cursor: isDragging ? "grabbing" : "grab",
@@ -48,8 +48,8 @@ const Slider = ({ className = "" }: { className?: string }) => {
           }} // Adjust thumb position based on value
           onMouseDown={startDragging}
         >
-          <div className="border-r-custom-soft-cyan-2 absolute left-1 h-2 w-2 border-[.4rem] border-transparent"></div>
-          <div className="border-l-custom-soft-cyan-2 absolute right-1 h-2 w-2 border-[.4rem] border-transparent"></div>
+          <div className="absolute left-1 h-2 w-2 border-[.4rem] border-transparent border-r-custom-soft-cyan-2"></div>
+          <div className="absolute right-1 h-2 w-2 border-[.4rem] border-transparent border-l-custom-soft-cyan-2"></div>
         </div>
       </div>
     </div>
