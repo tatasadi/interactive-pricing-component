@@ -25,6 +25,6 @@
   }
 
   .footer-link {
-    @apply cursor-pointer underline;
+    @apply cursor-pointer text-custom-strong-cyan-2 underline;
   }
 }

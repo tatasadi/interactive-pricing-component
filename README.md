@@ -28,8 +28,16 @@ Users should be able to:
 
 ### Screenshots
 
+Desktop:
+
 ![](./screenshot1.png)
+
+Aktive:
+
 ![](./screenshot2.png)
+
+Mobile:
+![](./screenshot3.png)
 
 ### Links
 
