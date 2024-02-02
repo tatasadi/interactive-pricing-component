@@ -34,7 +34,7 @@ export default function Home() {
   }
 
   return (
-    <main className="relative z-10 flex h-full min-h-screen w-full max-w-7xl flex-col items-center px-6 pt-[5.56rem] lg:min-h-0 lg:pt-[6.5rem]">
+    <main className="relative z-10 flex h-full min-h-screen w-full max-w-7xl flex-col items-center px-6 pt-[5.56rem] lg:min-h-0 lg:pt-[3rem]">
       <h1 className="text-xl font-extrabold leading-normal text-neutral-dark-desaturated-blue lg:text-[1.75rem] lg:leading-normal">
         Simple, traffic-based pricing
       </h1>
