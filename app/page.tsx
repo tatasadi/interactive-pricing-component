@@ -34,7 +34,7 @@ export default function Home() {
   }
 
   return (
-    <main className="relative z-10 flex h-full min-h-screen w-full max-w-7xl flex-col items-center px-6 pt-[5.56rem] lg:min-h-0 lg:pt-32">
+    <main className="relative z-10 flex h-full min-h-screen w-full max-w-7xl flex-col items-center px-6 pt-[5.56rem] lg:min-h-0 lg:pt-[6.5rem]">
       <h1 className="text-xl font-extrabold leading-normal text-neutral-dark-desaturated-blue lg:text-[1.75rem] lg:leading-normal">
         Simple, traffic-based pricing
       </h1>
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <div className="mb-[2.13rem] flex items-center gap-[0.62rem] md:col-start-2 md:row-start-1 md:mb-0">
             <span className="text-[2rem] font-extrabold -tracking-[0.05rem] text-neutral-dark-desaturated-blue lg:text-[2.5rem]">
-              ${currentPrice}
+              ${currentPrice.toFixed(2)}
             </span>
             <span className="text-sm font-semibold leading-normal lg:text-base">
               {isYearly ? "/ year" : "/ month"}
